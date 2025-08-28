@@ -1,0 +1,618 @@
+U-Boot SPL 2013.07 (Jun 06 2025 - 11:01:20)
+Board info: T23N
+
+apll_freq = 1188000000
+mpll_freq = 1200000000
+sdram init start
+DDR clk rate 600000000
+DDR_PAR of eFuse: 00000000 00000000
+sdram init finished
+image entry point: 0x80100000
+
+
+U-Boot 2013.07 (Jun 06 2025 - 11:01:20)
+
+Board: ISVP (Ingenic XBurst T23 SoC)
+DRAM:  64 MiB
+Top of RAM usable for U-Boot at: 84000000
+Reserving 398k for U-Boot at: 83f9c000
+Reserving 32784k for malloc() at: 81f98000
+Reserving 32 Bytes for Board Info at: 81f97fe0
+Reserving 124 Bytes for Global Data at: 81f97f64
+Reserving 128k for boot params() at: 81f77f64
+Stack Pointer at: 81f77f48
+Now running in RAM - U-Boot at: 83f9c000
+MMC:   msc: 0
+the manufacturer 85
+SF: Detected PY25Q128HA
+
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+info: [jy_mmc_upg] check..
+device name mmc!
+Card did not respond to voltage select!
+error: [jy_mmc_check] Unknow device type!!!
+Hit any key to stop autoboot:  0
+the manufacturer 85
+SF: Detected PY25Q128HA
+
+--->probe spend 4 ms
+SF: 2621440 bytes @ 0x40000 Read: OK
+--->read spend 842 ms
+## Booting kernel from Legacy Image at 80600000 ...
+   Image Name:   Linux-3.10.14__isvp_pike_1.0__
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    1677998 Bytes = 1.6 MiB
+   Load Address: 80010000
+   Entry Point:  803951d0
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.10.14__isvp_pike_1.0__ (@07cadbe52f42) (gcc version 5.4.0 (Ingenic Ingenic r3.3.0-g5
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 RESET ERROR PC:FC6FB405
+[    0.000000] CPU0 revision is: 00d00100 (Ingenic Xburst)
+[    0.000000] FPU revision is: 00b70000
+[    0.000000] cgu_vpu clk should be opened!
+[    0.000000] CCLK:1188MHz L2CLK:594Mhz H0CLK:200MHz H2CLK:200Mhz PCLK:100Mhz
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 004ab000 @ 00010000 (usable)
+[    0.000000]  memory: 00035000 @ 004bb000 (usable after init)
+[    0.000000] User-defined physical RAM map:
+[    0.000000]  memory: 03000000 @ 00000000 (usable)
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000-0x02ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000-0x02ffffff]
+[    0.000000] Primary instruction cache 16kB, 8-way, VIPT, linesize 32 bytes.
+[    0.000000] Primary data cache 16kB, 8-way, VIPT, no aliases, linesize 32 bytes
+[    0.000000] pls check processor_id[0x00d00100],sc_jz not support!
+[    0.000000] MIPS secondary cache 64kB, 8-way, linesize 32 bytes.
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 12192
+[    0.000000] Kernel command line: console=ttyS1,115200n8 mem=48M@0x0 rmem=16M@0x3000000 init=/linuxrc rootfstype)
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 43076k/49152k available (3636k kernel code, 6076k reserved, 1142k data, 212k init, 0k highm)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:347
+[    0.000000] clockevents_config_and_register success.
+[    0.000020] Calibrating delay loop... 1185.38 BogoMIPS (lpj=5926912)
+[    0.087809] pid_max: default: 32768 minimum: 301
+[    0.092703] Mount-cache hash table entries: 512
+[    0.097739] Initializing cgroup subsys debug
+[    0.101997] Initializing cgroup subsys freezer
+[    0.108798] regulator-dummy: no parameters
+[    0.113038] NET: Registered protocol family 16
+[    0.129201] bio: create slab <bio-0> at 0
+[    0.135324] jz-dma jz-dma: JZ SoC DMA initialized
+[    0.140308] usbcore: registered new interface driver usbfs
+[    0.145914] usbcore: registered new interface driver hub
+[    0.151354] usbcore: registered new device driver usb
+[    0.156618]  (null): set:249  hold:250 dev=100000000 h=500 l=500
+[    0.164482] Switching to clocksource jz_clocksource
+[    0.169434] cfg80211: Calling CRDA to update world regulatory domain
+[    0.176470] NET: Registered protocol family 2
+[    0.181334] TCP established hash table entries: 512 (order: 0, 4096 bytes)
+[    0.188302] TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+[    0.194688] TCP: Hash tables configured (established 512 bind 512)
+[    0.201030] TCP: reno registered
+[    0.204230] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.210192] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.216737] NET: Registered protocol family 1
+[    0.221388] RPC: Registered named UNIX socket transport module.
+[    0.227384] RPC: Registered udp transport module.
+[    0.232085] RPC: Registered tcp transport module.
+[    0.236870] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.243696] freq_udelay_jiffys[0].max_num = 10
+[    0.248167] cpufreq  udelay  loops_per_jiffy
+[    0.252538] 12000     59867   59867
+[    0.255804] 24000     119735  119735
+[    0.259260] 60000     299338  299338
+[    0.262691] 120000    598677  598677
+[    0.266268] 200000    997796  997796
+[    0.269754] 300000    1496694         1496694
+[    0.273462] 600000    2993389         2993389
+[    0.277192] 792000    3951274         3951274
+[    0.280879] 1008000   5028895         5028895
+[    0.284676] 1200000   5986779         5986779
+[    0.292996] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.299120] exFAT: Version 1.2.9
+[    0.303108] jffs2: version 2.2. © 2001-2006 Red Hat, Inc.
+[    0.309036] msgmni has been set to 84
+[    0.314570] io scheduler noop registered
+[    0.318604] io scheduler cfq registered (default)
+[    0.323339] jz-pwm jz-pwm: period_ns:max=2730666,min=42
+[    0.328939] wait stable.[288][cgu_vpu]
+[    0.332662] cgu_vpu can not set to 450000000, will change!!!
+[    0.339883] jz-uart.1: ttyS1 at MMIO 0x10031000 (irq = 58) is a uart1
+[    0.347701] console [ttyS1] enabled, bootconsole disabled
+[    0.347701] console [ttyS1] enabled, bootconsole disabled
+[    0.362718] brd: module loaded
+[    0.368018] loop: module loaded
+[    0.371878] zram: Created 2 device(s) ...
+[    0.376183] logger: created 256K log 'log_main'
+[    0.381282] jz TCU driver register completed
+[    0.386256] the id code = 852018, the flash name is PY25Q128HA
+[    0.392304] jz-sfc jz-sfc: sfc use DMA mode
+[    0.396669] jz-sfc jz-sfc: nor flash now use standard mode!
+[    0.402436] JZ SFC Controller for SFC channel 0 driver register
+[    0.408593] 6 cmdlinepart partitions found on MTD device jz_sfc
+[    0.414720] Creating 6 MTD partitions on "jz_sfc":
+[    0.419707] 0x000000000000-0x000000040000 : "boot"
+[    0.425198] 0x000000040000-0x000000208000 : "kernel"
+[    0.430916] 0x000000208000-0x0000006a0000 : "root"
+[    0.436436] 0x0000006a0000-0x0000006a8000 : "vendor"
+[    0.442078] 0x0000006a8000-0x000000b28000 : "appfs"
+[    0.447711] 0x000000b28000-0x000001000000 : "datafs"
+[    0.453370] SPI NOR MTD LOAD OK
+[    0.456736] tun: Universal TUN/TAP device driver, 1.6
+[    0.461966] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    0.468496] wait stable.[288][cgu_macphy]
+[    0.472662] Bus Mode Reg after reset: 0x00020101, cnt=0
+[    0.479108] Bus Mode Reg after reset: 0x00020101, cnt=1
+[    0.485488] Bus Mode Reg after reset: 0x00020101, cnt=2
+[    0.491882] Bus Mode Reg after reset: 0x00020101, cnt=3
+[    0.498273] Bus Mode Reg after reset: 0x00020101, cnt=4
+[    0.504652] Bus Mode Reg after reset: 0x00020101, cnt=5
+[    0.511043] Bus Mode Reg after reset: 0x00020101, cnt=6
+[    0.517434] Bus Mode Reg after reset: 0x00020101, cnt=7
+[    0.523813] Bus Mode Reg after reset: 0x00020101, cnt=8
+[    0.530204] Bus Mode Reg after reset: 0x00020101, cnt=9
+[    0.536594] func:jz_mii_bus_probe, synopGMAC_reset failed
+[    0.542166] jz_mii_bus: probe of jz_mii_bus.0 failed with error -1
+[    0.548652] =======>gmacdev = 0x821df780<================
+[    0.554245] =========>gmacdev->MacBase = 0xb34b0000 DmaBase = 0xb34b1000
+[    0.561216] Bus Mode Reg after reset: 0x00020101, cnt=0
+[    0.567637] Bus Mode Reg after reset: 0x00020101, cnt=1
+[    0.574016] Bus Mode Reg after reset: 0x00020101, cnt=2
+[    0.580408] Bus Mode Reg after reset: 0x00020101, cnt=3
+[    0.586800] Bus Mode Reg after reset: 0x00020101, cnt=4
+[    0.593178] Bus Mode Reg after reset: 0x00020101, cnt=5
+[    0.599569] Bus Mode Reg after reset: 0x00020101, cnt=6
+[    0.605964] Bus Mode Reg after reset: 0x00020101, cnt=7
+[    0.612344] Bus Mode Reg after reset: 0x00020101, cnt=8
+[    0.618736] Bus Mode Reg after reset: 0x00020101, cnt=9
+[    0.625116] func:jz_mac_probe, synopGMAC_reset failed
+[    0.630341] jz_mac: probe of jz_mac.0 failed with error -1
+[    0.636139] usbcore: registered new interface driver zd1201
+[    0.642012] DWC IN OTG MODE
+[    0.645540] dwc2 dwc2: Keep PHY ON
+[    0.649110] dwc2 dwc2: Using Buffer DMA mode
+[    0.653535] dwc2 dwc2: Core Release: 3.00a
+[    0.657824] dwc2 dwc2: DesignWare USB2.0 High-Speed Host Controller
+[    0.664335] dwc2 dwc2: new USB bus registered, assigned bus number 1
+[    0.671685] hub 1-0:1.0: USB hub found
+[    0.675586] hub 1-0:1.0: 1 port detected
+[    0.679854] dwc2 dwc2: DWC2 Host Initialized
+[    0.684685] cgu_msc0 can not set to 24000000, will change!!!
+[    0.690621] jzmmc_v1.2 jzmmc_v1.2.0: vmmc regulator missing
+[    0.696769] jzmmc_v1.2 jzmmc_v1.2.0: register success!
+[    0.702360] TCP: cubic registered
+[    0.705798] NET: Registered protocol family 17
+[    0.710875] soc_vpu probe success,version:1.0.0-03203fd46d
+[    0.716815] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+[    0.728517] VFS: Mounted root (squashfs filesystem) readonly on device 31:2.
+[    0.736255] Freeing unused kernel memory: 212K (804bb000 - 804f0000)
+[    0.757818] dwc2 dwc2: ID PIN CHANGED!
+[    1.215967] usb 1-1: new high-speed USB device number 2 using dwc2
+mdev is ok......
+mount -t squashfs /dev/mtdblock4 /system
+mount -t jffs2 /dev/mtdblock5 /system/data
+ota_cfg file does not exist, no upgrade required.
+md5sum: /data/file_checksums.md5: No such file or directory
+All files passed the checksum check, no repair needed.
+/
+umount: can't forcibly umount /mnt/sdcard: Invalid argument
+[    1.514824] Example driver loaded. Major number: 252
+[    1.526011] Stepper Motor Driver Loaded
+
+Ingenic-uc1_1 login: Failed to open connection to "system" message bus: Failed to connect to socket /var/run/dbus-y
+sdcard: umount...
+[    6.857018] v_step: 1152
+[    7.714007] h_step: 1984
+insmod motor end
+[    8.551916] name : i2c0 nr : 0
+[    8.656414]  sensor_read: addr=0x3107 value = 0x9b
+[    8.661898]  sensor_read: addr=0x3108 value = 0x3a
+[    8.667400]  sensor_read: addr=0x801e value = 0xf
+[    8.672274] info: success sensor find : sc2337p
+sensor :sc2337p
+--------------------
+isp_clk=125000000
+
+--nrvbs 2
+[    8.929585] cgu_isp can not set to 153000000, will change!!!
+[    8.935465] cgu_vpu can not set to 416000000, will change!!!
+[    8.968321] @@@@ tx-isp-probe ok(version H20240204a), compiler date=Feb  4 2024 @@@@@
+[    9.018383] pipe_request_dma: paddr = 0x2c80000
+[    9.023117] dma dma0chan24: Channel 24 have been requested.(phy id 7,type 0x06 desc a290b000)
+[    9.034474] pipe_request_dma: paddr = 0x2cc0000
+[    9.039407] dma dma0chan25: Channel 25 have been requested.(phy id 6,type 0x06 desc a2931000)
+[    9.048615] pipe_request_dma: paddr = 0x2a00000
+[    9.053349] dma dma0chan26: Channel 26 have been requested.(phy id 5,type 0x04 desc a2951000)
+[    9.075929] @@@@@ inner codec power up@@@@@@
+[    9.485939] @@@@ audio driver ok(version H20230614a) @@@@@
+[    9.522695] /jenkins/workspace/T23N_CAMPT2_01/project/opensource/drivers/button/button_driver.c gpio_drv_init l2
+[    9.539029] button driver loading is complete
+[    9.860022] [atbm_log]:atbm_usb_module_init 0
+[    9.869556] [atbm_log]:platform_init(250)
+[    9.873776] [atbm_log]:SVN_VER=31152,DPLL_CLOCK=2,BUILD_TIME=2024-12-27_15:53:13
+[    9.883685] [atbm_log]:atbm_usb_probe : idVendor[7a] idProduct[888b]
+[    9.890440] [atbm_log]:AsmLite probe!
+[    9.894231] [atbm_log]:Probe called -1 v1
+[    9.898501] [atbm_log]:not CONFIG_USE_DMA_ADDR_BUFFER
+[    9.903889] [atbm_log]:CONFIG_TX_NO_CONFIRM
+[    9.908359] [atbm_log]:ble_spin_lock init
+[    9.912606] [atbm_log]:Allocated hw_priv @ 82e40ec0
+[    9.918047] [atbm_log]: wait_event_interruptible from  send_prbresp_wq
+[    9.924864] [atbm_log]:atbmwifi USB_USE_TASTLET_TXRX enable (82e40ec0)
+[    9.931673] [atbm_log]:atbmwifi USB_USE_TASTLET_TXRX enable (82e40ec0)
+[    9.938934] [atbm_log]:Get 6012B-X UID Success!!support BLE
+[    9.944710] [atbm_log]:atbm_get_chiptype, chipver=0x4a, g_wifi_chip_type[12]
+[    9.952034] [atbm_log]:atbm_before_load_firmware++
+[    9.957096] [atbm_log]:+++++++++++++++++1.1v++++++++++++++++++
+[    9.963138] [atbm_log]:===================~_~====================
+[    9.970003] [atbm_log]:atbm_start_load_firmware++
+[    9.974874] [atbm_log]:
+[    9.974874] ======>>> load WIFI BLE COMB firmware <<<======
+[    9.974874]
+[    9.984720] fwhdr->flags 34353678 sram_addr 9009000
+[    9.989783] [atbm_log]:START DOWNLOAD ICCM=========
+[    9.994833] [atbm_log]:atbm_load_firmware_generic: addr 10000: len 15000
+[   10.085776] [atbm_log]:START DOWNLOAD DCCM=========
+[   10.090864] [atbm_log]:atbm_load_firmware_generic: addr 800000: len a000
+[   10.138883] [atbm_log]:START DOWNLOAD SRAM=========
+[   10.143939] [atbm_log]:atbm_load_firmware_generic: addr 9009000: len d000
+[   10.204249] [atbm_log]:atbm_after_load_firmware++
+[   10.209151] [atbm_log]:ARES_A:after_load_firmware
+[   10.214308] [atbm_log]:0x1610102c=0x40a0e
+[   10.218894] [atbm_log]:0x1610102c=0x10a0f
+[   10.223118] [atbm_log]:0x16101000=0x8000e08
+[   10.227848] [atbm_log]:set_block_size=256
+[   10.232029] [atbm_log]:firmwareCap f189
+[   10.236036] [atbm_log]:firmwareCap2 1104
+[   10.240097] [atbm_log]:wsm_caps.firmwareCap 1104f189 4
+[   10.245245] [atbm_log]:apollo wifi WSM init done.
+[   10.245245]    Input buffers: 6 x 1648 bytes
+[   10.245245]    Hardware: 7.0
+[   10.245245]    WSM firmware [=MODEM==USB=+BLE+Oct 23 2023 14:24:24], ver: 18378, build: 4228, api: 1060, cap: 0]
+[   10.276765] [atbm_log]:EFUSE(8)                              [0]
+[   10.280663] [atbm_log]:EFUSE(I)                                      [0]
+[   10.284632] [atbm_log]:EFUSE(B)                      [0]
+[   10.288435] [atbm_log]:CAPABILITIES_ATBM_PRIVATE_IE      [0]
+[   10.294293] [atbm_log]:CAPABILITIES_NVR_IPC              [0]
+[   10.300161] [atbm_log]:CAPABILITIES_NO_CONFIRM           [1]
+[   10.306029] [atbm_log]:CAPABILITIES_SDIO_PATCH           [0]
+[   10.311885] [atbm_log]:CAPABILITIES_NO_BACKOFF           [0]
+[   10.317753] [atbm_log]:CAPABILITIES_CFO                  [0]
+[   10.323610] [atbm_log]:CAPABILITIES_AGC                  [1]
+[   10.329479] [atbm_log]:CAPABILITIES_TXCAL                [1]
+[   10.335335] [atbm_log]:CAPABILITIES_MONITOR              [0]
+[   10.341203] [atbm_log]:CAPABILITIES_CUSTOM               [0]
+[   10.347071] [atbm_log]:CAPABILITIES_SMARTCONFIG          [0]
+[   10.352928] [atbm_log]:CAPABILITIES_ETF                  [1]
+[   10.358795] [atbm_log]:CAPABILITIES_LMAC_RATECTL         [1]
+[   10.364651] [atbm_log]:CAPABILITIES_LMAC_TPC             [1]
+[   10.370519] [atbm_log]:CAPABILITIES_LMAC_TEMPC           [1]
+[   10.376386] [atbm_log]:CAPABILITIES_CTS_BUG              [0]
+[   10.382243] [atbm_log]:CAPABILITIES_USB_RECOVERY_BUG     [0]
+[   10.388109] [atbm_log]:CAPABILITIES_USE_IPC              [0]
+[   10.393965] [atbm_log]:CAPABILITIES_OUTER_PA             [0]
+[   10.399834] [atbm_log]:CAPABILITIES_POWER_CONSUMPTION    [0]
+[   10.405691] [atbm_log]:CAPABILITIES_RSSI_DECIDE_TXPOWER  [0]
+[   10.411558] [atbm_log]:CAPABILITIES_RTS_LONG_DURATION    [0]
+[   10.417427] [atbm_log]:CAPABILITIES_TX_CFO_PPM_CORRECTION[1]
+[   10.423283] [atbm_log]:CAPABILITIES_SHARE_CRYSTAL       [0]
+[   10.429061] [atbm_log]:CAPABILITIES_CFO_DCXO_CORRECTION      [1]
+[   10.434827] [atbm_log]:CAPABILITIES_HW_CHECKSUM          [0]
+[   10.440696] [atbm_log]:CAPABILITIES_SINGLE_CHANNEL_MULRX [0]
+[   10.446565] [atbm_log]:EX_CAPABILITIES_TWO_CHIP_ONE_SOC      [0]
+[   10.452150] [atbm_log]:EX_CAPABILITIES_MANUAL_SET_AC         [0][atbm_log]:EX_CAPABILITIES_LMAC_BW_CONTROL   [1]
+[   10.461895] [atbm_log]:EX_CAPABILITIES_SUPPORT_TWO_ANTENNA   [0][atbm_log]:EX_CAPABILITIES_ENABLE_STA_REMAIN_ON]
+[   10.473260] [atbm_log]:EX_CAPABILITIES_ENABLE_PS        [1][atbm_log]:EX_CAPABILITIES_TX_REQUEST_FIFO_LINK     ]
+[   10.483724] [atbm_log]:EX_CAPABILITIES_DRIVER_PHY_REG_INIT      [0][atbm_log]:EX_CAPABILITIES_DRIVER_PROCESS_BA]
+[   10.494819] [atbm_log]:EX_CAPABILITIES_DRIVER_PHY_REG_INIT[0]
+[   10.500959] [atbm_log]:EX_CAPABILITIES_DRIVER_PROCESS_BA[1]
+[   10.506737] [atbm_log]:CONFIG_PRODUCT_TEST_USE_FEATURE_ID [1]
+[   10.512684] [atbm_log]:CONFIG_PRODUCT_TEST_USE_GOLDEN_LED [1]
+[   10.518756] [atbm_log]:mdelay wait wsm_startup_done  !!
+[   10.524171] [atbm_log]:not need phy init in driver
+[   10.529554] [atbm_log]:wsm_generic_confirm:status(2)
+[   10.534749] [atbm_log]:<WARNING> wsm_write_mib fail !!! mibId=4132
+[   10.541431] [atbm_log]:efuse data is [0x1,0x3b,0x1f,0x0,0x1f,0xc,0x0,0x0,0x30:0xbe:0x29:0xa3:0x43:0xdb]
+[   10.551429] [atbm_log]:apollo wifi : can't open /data/.mac.info
+[   10.557605] [atbm_log]:chip is 6012B not support HT40!
+[   10.563383] [atbm_log]:cfg80211_regdomain is NULL
+[   10.570532] [atbm_log]:country code 00 country_support_chan = 14
+[   10.576995] [atbm_log]:enable sg
+[   10.580363] [atbm_log]:[wlan0] has been disabled
+[   10.595852] [atbm_log]:enable sg
+[   10.601495] [atbm_log]:[p2p0] has been disabled
+[   10.616957] [atbm_log]:is registered as 'ALTOBEAM'
+[   10.621923] [atbm_log]:ieee80211_ble_dev_register
+[   10.629441] [atbm_log]:ble start
+[   10.635135] [atbm_log]:[ALTOBEAM-ble_recv] start
+[   10.640052] [atbm_log]:ble subscribe
+[   10.643935] [atbm_log]:[ALTOBEAM-ble_xmit] start
+[   10.651288] [atbm_log]:ble_platform_probe(82e79d00)
+[   10.656477] [atbm_log]:apollo wifi : can't open /tmp/atbm_txpwer_dcxo_cfg.txt
+[   10.663881] [atbm_log]:apollo wifi : can't open /tmp/set_rate_power.txt
+[   10.671356] [atbm_log]:get chip id [834][10][0]
+[   10.676250] [atbm_log]:current chiptype 6012B-X
+[   10.681032] [atbm_log]:[atbm_wtd]:set wtd_probe = 1
+[   10.686483] usbcore: registered new interface driver atbm_wlan
+[   11.699957] [atbm_log]:atbm_setup_mac:addr(30be29a343db)
+[   11.705662] [atbm_log]:3 !!! atbm_vif_setup_params: enabling priv
+[   11.735911] [atbm_log]:[STA] Interface ID:0 of type:2 added
+[   11.741912] [atbm_log]:atbm_set_uapsd_param:uapsdFlags(0)
+[   11.748124] [atbm_log]:br0_netdev_open()-1199: dev_get_by_name(br0)
+[   11.755002] [atbm_log]:atbm_set_uapsd_param:uapsdFlags(0)
+[   11.761208] [atbm_log]:atbm_set_uapsd_param:uapsdFlags(0)
+[   11.767415] [atbm_log]:atbm_set_uapsd_param:uapsdFlags(0)
+[   11.773553] [atbm_log]:atbm_set_uapsd_param:uapsdFlags(0)
+[   11.788389] /jenkins/workspace/T23N_CAMPT2_01/project/opensource/drivers/led/led_driver.c gpio_drv_init line 125
+[   11.803908] LED driver loading is complete
+ota_cfg file does not exist, no upgrade required.
+Starting system message bus: done
+hardware_control start status=0
+network_control start status=0
+ipc_colink start status=0
+/system/init
+ipc_manage start status=0
+ipc_watchdog start status=0
+start ipc_guard process 0
+[hardware]Cloud log register success.
+dbus connection no init, send data error
+init_dbus success
+info: timeout = 10
+[colink]Cloud log register success.
+Copied 256 bytes from address 0x00000000 in flash to /tmp/license_colink
+set system time
+Fri Dec  1 00:00:00 UTC 2023
+[network]Cloud log register success.
+semid already exist(0), prepare to init
+semid already exist(32769), prepare to init
+log_level:2
+init_dbus success
+init_dbus success
+Copied 256 bytes from address 0x00000000 in flash to /tmp/license_network
+offline_reasons:device_info_get,device_offline:[device or process reboot!]
+Unable to open file /tmp/resolv.conf
+Unable to open file /tmp/resolv.conf
+Process(sonoff_dns.sh) is not running, start running the process(sonoff_dns.sh).
+.server_info not find !!!
+enter colink lib init.
+exit colink lib init.
+[COLINK print:src/colink.c,253,colinkProcess] COLINK_PROCESS_START
+[COLINK print:src/colink.c,284,colinkProcess] COLINK_PROCESS_DISTOR_START
+[COLINK print:src/colink.c,301,colinkProcess] COLINK_PROCESS_DISTOR
+[COLINK print:src/colink_distor.c,389,colinkDistorSubProcess] DISTOR_PROCESS_START
+[COLINK print:src/colink_distor.c,407,colinkDistorSubProcess] DISTOR_PROCESS_DNS_START
+
+=======colinkGethostbyname======
+hostname: us-dispd-v1.coolkit.cc
+getaddrinfo err: -2
+[COLINK print:src/colink_distor.c,567,colinkDistorSubProcess] DISTOR_PROCESS_RECONNECT
+[COLINK print:src/colink_distor.c,616,colinkDistorSubProcess] DISTOR_PROCESS_WAIT_RECONNECT
+killall: wpa_supplicant: no process killed
+Successfully initialized wpa_supplicant
+[manage]Cloud log register success.
+dbus module init
+rfkill: Cannot open RFKILL control device
+nl80211: Could not re-add multicast membership for vendor events: -2 (No such file or directory)
+[   16.188072] [atbm_log]:__ieee80211_start_scan:channels[14]
+[   16.226051] [atbm_log]:ieee80211_prep_hw_scan:n_chans(14),space(14),index(14),scaned(14)
+[   16.237824] [atbm_log]:atbm_hw_scan:if_id(0)
+[   16.243282] [atbm_log]:atbm_hw_scan:scan, delay suspend
+[   16.249778] [atbm_log]:scan start band(0),(14)
+sc2337p
+
+killall: udhcpc: no process killed
+=============>connect wifi:wifi_start.sh 'XXXXXXXXXX' 'YYYYYYYYYYYY'
+long link is not running, send fail:3
+connect to WiFi ssid: XXXXXXXXXX, Passwd: YYYYYYYYYYYY
+[   16.409179] cgu_isp can not set to 125000000, will change!!!
+[   16.419927] cgu_vpu can not set to 600000000, will change!!!
+[   16.516530] -----sc2337p_detect: 619 ret = 0, v = 0x9b
+[   16.522664] -----sc2337p_detect: 627 ret = 0, v = 0x3a
+[   16.528122] sc2337p chip found @ 0x30 (i2c0)
+[   16.532816] sensor driver version H20240926a
+[   16.735213] Ivdc init! direct_mode is 1
+[   16.765754] sc2337p stream on
+[   16.775392] Err [VIC_INT] : hor err ch2 !!!!!
+[   16.779906] Err [VIC_INT] : hor err ch3 !!!!!
+[   16.784412] error handler!!!
+[   16.787389] addr ctl is 0x0
+[   16.790357] vb is null, buf get:0x80000000 lastaddr = 0x00000000 idx=0 isp_index = -2142610704
+i264e[info]: profile High, level 4.0
+i264e[info]: profile High, level 2.2
+[   16.907231] wait stop  q->num_buffers=2 q->done_count=1
+[   16.925930] streamoff stop！！
+[   16.945924] wait stop  q->num_buffers=3 q->done_count=0
+[   16.975540] vb is null, buf get:0x80000000 lastaddr = 0x80000000 idx=0 isp_index = 0
+[   17.025540] vb is null, buf get:0x80000000 lastaddr = 0x80000000 idx=0 isp_index = 0
+[   17.065926] streamoff stop！！
+[   17.094176] Opening horizontal motor device
+long link is not running, send fail:0
+[   17.104737] Opening vertical motor device
+Copied 256 bytes from address 0x00000000 in flash to /tmp/license_ipc_manage
+long link is not running, send fail:0
+long link is not running, send fail:0
+long link is not running, send fail:0
+[   17.256245] ---mirror and flip-----
+long link is not running, send fail:0
+long link is not running, send fail:0
+close notify_handle_events
+long link is not running, send fail:0
+long link is not running, send fail:0
+long link is not running, send fail:0
+long link is not running, send fail:0
+long link is not running, send fail:0
+long link is not running, send fail:0
+long link is not running, send fail:0
+timezone 255.000000
+Successfully initialized wpa_supplicant
+warn: shm_init,53shm init already
+[   17.497705] [atbm_log]:hw_priv->scan.status 0
+[   17.502631] [atbm_log]:atbm_scan_work:end(0)
+[   17.535995] [atbm_log]:stop scan:policy empty
+rfkill: Cannot open RFKILL control device
+nl80211: Could not re-add multicast membership for vendor events: -2 (No such file or directory)
+wpa_event_notifications start...
+udhcpc (v1.22.1) started
+request event notification:OK
+
+sonoff_dns.sh work
+.server_info not find !!!
+warn: shm_init,53shm init already
+[   17.791129] [atbm_log]:__ieee80211_start_scan:channels[14]
+Sending discover...
+aec version: v2.1.201201 in webrtc_profile.ini and v2.1.201201 in aec lib.
+can find the value of PATH:AEC_PATH,debug audio library
+[   17.815981] [atbm_log]:ieee80211_prep_hw_scan:n_chans(14),space(14),index(14),scaned(14)
+[   17.824714] [atbm_log]:atbm_hw_scan:if_id(0)
+[   17.829851] [atbm_log]:atbm_hw_scan:scan, delay suspend
+[   17.835700] [atbm_log]:scan start band(0),(14)
+long link is not running, send fail:0
+long link is not running, send fail:0
+long link is not running, send fail:0
+[   19.081462] [atbm_log]:hw_priv->scan.status 0
+[   19.086260] [atbm_log]:atbm_scan_work:end(0)
+[   19.115919] [atbm_log]:stop scan:policy empty
+event notify:<3>SME: Trying to authenticate with 18:62:2c:3f:17:[   19.126920] [atbm_log]:wlan0:free authen bss ++
+08 (SSID='XXXXXXXXXX' freq=2412 MHz)
+[   19.165926] [atbm_log]:authen:(xx:xx:xx:xx:xx:xx),ssid(XXXXXXXXXX)
+[   19.172649] [atbm_log]:work suspend
+[   19.183306] [atbm_log]:authenticate[xx:xx:xx:xx:xx:xx]:[0][1]
+[   19.200788] [atbm_log]:wlan0: authenticate with xx:xx:xx:xx:xx:xx (try 1) (1)(0)
+[   19.219863] [atbm_log]:[STA] Join DTIM: 1, interval: 100
+[   19.225502] [atbm_log]:atbm_set_pm:if_id(0) is not assco
+[   19.245750] [atbm_log]:cancle_work_done:[xx:xx:xx:xx:xx:xx][15][11]
+[   19.252970] [atbm_log]:wlan0: authenticated
+event notify:<3>Trying to associate with xx:xx:xx:xx:xx:xx (SSID[   19.261216] [atbm_log]:wlan0:free authen bss ++
+='XXXXXXXXXX' freq=2412 MHz)
+[   19.296076] [atbm_log]:wlan0:free authen bss --
+[   19.300938] [atbm_log]:sta has been insert(0)
+[   19.308928] [atbm_log]:work:flush sta[xx:xx:xx:xx:xx:xx]
+[   19.319834] [atbm_log]:cancle_work_done:[xx:xx:xx:xx:xx:xx][15][11]
+[   19.333111] [atbm_log]:wlan0: associated
+[   19.337644] [atbm_log]:wlan0:free authen bss ++
+[   19.343236] [atbm_log]:atbm_set_uapsd_param:uapsdFlags(0)
+[   19.349887] [atbm_log]:atbm_set_uapsd_param:uapsdFlags(0)
+[   19.359766] [atbm_log]:atbm_set_uapsd_param:uapsdFlags(0)
+[   19.366447] [atbm_log]:atbm_set_uapsd_param:uapsdFlags(0)
+[   19.372614] [atbm_log]:[xx:xx:xx:xx:xx:xx]:20M channel
+[   19.378652] [atbm_log]:atbm_bss_info_changed:chatype(1),channelNumber(1)
+[   19.388428] [atbm_log]:ieee80211_recalc_ps:work busy
+[   19.415998] [atbm_log]:[xx:xx:xx:xx:xx:xx]:assc sucess band[0]
+event notify:<3>Associated with xx:xx:xx:xx:xx:xx[   19.423495] [atbm_log]:work:flush sta[xx:xx:xx:xx:xx:xx]
+
+event notify:<3>CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+[   19.441311] [atbm_log]:flush sta(0):
+[   19.446656] [atbm_log]:[wlan0]:[8e88] deliver slow
+[   19.452926] [atbm_log]:[wlan0]:down_eap_rate
+[   19.457632] [atbm_log]:wlan0:2/4 Pairwise
+[   19.464915] [atbm_log]:[wlan0]:dtim changed [0]->[2]
+[   19.470848] [atbm_log]:[wlan0]:[8e88] deliver slow
+[   19.509774] [atbm_log]:[wlan0]:down_eap_rate
+[   19.514247] [atbm_log]:wlan0:4/4 Pairwise
+[   19.522058] [atbm_log]:3SET_KEY:idx(0),if_id(0)
+[   19.532148] [atbm_log]:3SET_KEY:idx(1),if_id(0)
+event notify:<3>WPA: Key negotiation completed with xx:xx:xx:xx:xx:xx [PTK=CCMP GTK=CCMP]
+conne[   19.541454] [atbm_log]:ieee80211_recalc_ps:work busy
+ct success.
+wpa_event_notifications end.
+[   19.552106] [atbm_log]:KEK[34][149][119][96]
+[   19.566938] [atbm_log]:KCK[236][202][144][221]
+dbus connection no init, send data error
+Sending discover...
+[   20.826239] [atbm_log]:dhcp work(1)
+[   20.841164] [atbm_log]:[wlan0]:[8] deliver slow
+[   20.852050] [atbm_log]:dhcp done[   20.862570] NOHZ: local_softirq_pending 08
+Sending select for 192.168.0.250...
+
+[   20.896442] [atbm_log]:dhcp work(1)
+[   20.924053] [atbm_log]:[wlan0]:[8] deliver slow
+[   20.935844] [atbm_log]:dhcp done[   20.940832] NOHZ: local_softirq_pending 08
+Lease of 192.168.0.250 obtained, lease time 604800
+[   20.954265] [atbm_log]:connecting done
+deleting routers
+adding dns 192.168.0.6
+adding dns 192.168.0.6
+adding dns 192.168.0.6
+sonoff_dns.sh work
+.server_info not find !!!
+long link is not running, send fail:0
+long link is not running, send fail:0
+long link is not running, send fail:1
+long link is not running, send fail:1
+Process(sonoff_dns.sh) is not running, start running the process(sonoff_dns.sh).
+.server_info not find !!!
+enter colink lib init.
+exit colink lib init.
+[COLINK print:src/colink.c,253,colinkProcess] COLINK_PROCESS_START
+[COLINK print:src/colink.c,284,colinkProcess] COLINK_PROCESS_DISTOR_START
+[COLINK print:src/colink.c,301,colinkProcess] COLINK_PROCESS_DISTOR
+[COLINK print:src/colink_distor.c,389,colinkDistorSubProcess] DISTOR_PROCESS
+[   23.376120] [atbm_log]:AMPDU[wlan0]:action[2],tid[0],ssn[4],buff_size[0],token[0],ta[xx:xx:xx:xx:xx:xx]
+_START
+[COLINK print:src/colink_distor.c,407,colinkDistorSubPro[   23.390909] [atbm_log]:ieee80211_process_addba_request:]
+cess] DISTOR_PROCESS_DNS_START
+
+=======colinkGethostbyname======
+hostname: us-dispd-v1.coolkit.cc
+[   23.411328] [atbm_log]:AMPDU[wlan0]:action[0],tid[0],ssn[1],buff_size[0],token[0],ta[xx:xx:xx:xx:xx:xx]
+[   23.429724] [atbm_log]:AMPDU[wlan0]:action[4],tid[0],ssn[0],buff_size[64],token[0],ta[xx:xx:xx:xx:xx:xx]
+[IPv4]52.37.255.5 [port]443
+[COLINK print:src/colink_distor.c,426,colinkDistorSubProcess] DISTOR_PROCESS_DNS_GET_IP
+
+=======colinkGethostbynameState======
+[COLINK print:src/colink_distor.c,452,colinkDistorSubProcess] DISTOR_PROCESS_CONNECT
+1.0======> connect time stamp:1701388810711
+1.1======> connect time difference:215
+select success, continue SSL_connect.
+SSL_connect success.
+[COLINK print:src/colink_distor.c,473,colinkDistorSubProcess] DISTOR_PROCESS_CONNECTING
+[COLINK print:src/colink_distor.c,493,colinkDistorSubProcess] DISTOR_PROCESS_WRITE
+[COLINK print:src/colink_distor.c,513,colinkDistorSubProcess] DISTOR_PROCESS_READ
+[COLINK print:src/colink_distor.c,523,colinkDistorSubProcess] read_tcp_buf=[177][HTTP/1.1 200 OK
+Content-Length: 91
+Content-Type: application/json; charset=utf-8
+
+{"error":0,"reason":"ok","IP":"52.53.61.98","port":443,"domain":"conn-us-long4.coolkit.cc"}]
+[COLINK print:src/colink_distor.c,544,colinkDistorSubProcess] DISTOR_PROCESS_STOP
+[COLINK print:src/colink.c,375,colinkProcess] COLINK_PROCESS_SERVER_START
+[COLINK print:src/colink.c,386,colinkProcess] COLINK_PROCESS_SERVER
+[COLINK print:src/colink_server.c,3152,colinkServerSubProcess] SERVER_PROCESS_START
+1.0======> connect time stamp:1701388812656
+1.1======> connect time difference:146
+select success, continue SSL_connect.
+select success, continue SSL_connect.
+SSL_connect success.
+[COLINK print:src/colink_server.c,3185,colinkServerSubProcess] SERVER_PROCESS_CONNECT
+[COLINK print:src/colink_server.c,3216,colinkServerSubProcess] SERVER_PROCESS_WS_CONNECT
+[COLINK print:src/colink_server.c,3241,colinkServerSubProcess] SERVER_PROCESS_WS_READ
+[COLINK print:src/colink_server.c,3283,colinkServerSubProcess] SERVER_PROCESS_LOGIN
+[COLINK print:src/colink_server.c,3303,colinkServerSubProcess] SERVER_PROCESS_LOGIN_OK
+Thu Aug 28 21:15:08 UTC 2025
+timezone 1.000000
+external queue is full:size(30)
+external queue is full:size(31)
+external queue is full:size(31)
+external queue is full:size(30)
+1.1 del check_time_handle.
+2025-08-28 21:15:10.504 PROFILE createRtcCertificate(): [Certificate creation time] Time taken: 642 ms
+initKvsWebRtclib
+init_lws_create_context
+=======>send ping pkt...
+[COLINK print:src/colink_server.c,3409,colinkServerSubProcess] recv pong, send_time is 0
